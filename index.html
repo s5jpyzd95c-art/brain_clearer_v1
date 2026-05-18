@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脑子清空器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 脑子清空器</h1>
+            <p class="subtitle">清空思绪，安心入睡</p>
+        </header>
+
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">💭</div>
+            <p>躺下后脑子乱糟糟？</p>
+            <p>点击下方按钮说出你的想法</p>
+        </div>
+
+        <div class="thoughts-list" id="thoughtsList">
+            <h2>我的思绪</h2>
+            <ul id="thoughtsUl"></ul>
+        </div>
+
+        <div class="actions">
+            <button class="clear-btn" id="clearBtn">😴 清空并安心睡觉</button>
+            <button class="speech-btn" id="speechBtn">🎤 开始说话</button>
+            <button class="text-btn" id="textBtn">📝 输入想法</button>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h3>输入想法</h3>
+                <textarea id="thoughtInput" placeholder="例如：明天要交报告，忘了回邮件..."></textarea>
+                <button class="submit-btn" id="submitBtn">添加想法</button>
+            </div>
+        </div>
+
+        <div class="modal" id="clearModal">
+            <div class="modal-content">
+                <h3>确认清空</h3>
+                <p>所有想法将保存到今天的日志中，明天再处理它们吧！</p>
+                <div class="modal-actions">
+                    <button class="cancel-btn" id="cancelClear">再想想</button>
+                    <button class="confirm-btn" id="confirmClear">清空并安心睡觉</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="successModal">
+            <div class="modal-content success">
+                <div class="success-icon">🌙</div>
+                <h3>晚安</h3>
+                <p>你的想法已经安全保存，安心睡个好觉吧！</p>
+                <button class="ok-btn" id="okBtn">好的</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
